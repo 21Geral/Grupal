@@ -24,7 +24,7 @@ const createButtonAddCart = () => {
   return button;
 };
 
-const createQuantitySelector= (initial = 1)=>{
+const createQuantitySelector = (initial = 1) => {
   const container = document.createElement("div");
   container.className =
     "bg-[#c83b0e] text-white  px-4 py-1.5 rounded-full text-sm font-semibold flex items-center justify-between gap-2 shadow-md w-full select-none";
@@ -63,7 +63,7 @@ const createQuantitySelector= (initial = 1)=>{
   container.appendChild(btnPlus);
 
   return container;
-}
+};
 function createCartControls() {
   const wrapper = document.createElement("div");
   wrapper.className = "flex justify-center items-center";
@@ -71,15 +71,12 @@ function createCartControls() {
   const button = createButtonAddCart();
   const quantitySelector = createQuantitySelector(1);
 
-  
   quantitySelector.style.display = "none";
 
- 
   button.addEventListener("click", () => {
     button.style.display = "none";
     quantitySelector.style.display = "flex";
   });
-
 
   const counter = quantitySelector.querySelector("span");
   const btnMinus = quantitySelector.querySelector("button:first-child");
@@ -89,7 +86,7 @@ function createCartControls() {
     if (value < 1) {
       quantitySelector.style.display = "none";
       button.style.display = "flex";
-      counter.textContent = "1"; 
+      counter.textContent = "1";
     }
   });
 
