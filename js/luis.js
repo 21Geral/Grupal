@@ -26,8 +26,7 @@ const createButtonAddCart = () => {
 
 const createQuantitySelector = (initial = 1) => {
   const container = document.createElement("div");
-  container.className =
-    "bg-[#c83b0e] text-white  px-4 py-1.5 rounded-full text-sm font-semibold flex items-center justify-between gap-2 shadow-md w-full select-none";
+  container.className =    "bg-[#c83b0e] text-white  px-4 py-1.5 rounded-full text-sm font-semibold flex items-center justify-between gap-2 shadow-md w-full select-none";
 
   const btnMinus = document.createElement("button");
   btnMinus.className = "p-1 hover:scale-110 transition cursor-pointer";
@@ -63,7 +62,7 @@ const createQuantitySelector = (initial = 1) => {
   container.appendChild(btnPlus);
 
   return container;
-};
+}; 
 function createCartControls() {
   const wrapper = document.createElement("div");
   wrapper.className = "flex justify-center items-center";
